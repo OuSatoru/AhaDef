@@ -1,0 +1,15 @@
+name: AhaDef
+fileTypes: [def]
+scopeName: source.def
+
+patterns:
+- comment: Comments
+  name: comment.line.number-sign.ahadef
+  begin: '#'
+  end: $
+  beginCaptures:
+    '0': {name: punctuation.definition.comment.ahadef}
+
+- comment: Actions
+  name: constant.language.ahadef
+  match: \b(ONCHOICE|ONBLUR|PROMPT)\b

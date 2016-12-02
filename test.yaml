@@ -1,0 +1,11 @@
+name: AhaDef
+fileTypes: [def]
+scopeName: source.def
+
+patterns:
+- comment: Comments
+  name: comment.line.number-sign.def
+  begin: '#'
+  end: $
+  beginCaptures:
+    '0': {name: punctuation.definition.comment.def}
