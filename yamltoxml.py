@@ -5,6 +5,6 @@ data = yaml.load(open('ahadef.yaml'))
 
 print(data)
 
-with open('ahadef.tmLanguage', 'wb') as f:
+with open('def.tmLanguage', 'wb') as f:
     plistlib.dump(data, f)
 

@@ -5,4 +5,4 @@ uuid: E012E100-B915-11E6-B576-E094675966E4
 
 patterns:
 - name: comment
-  match: ONCHOICE
+  match: \b(ONCHOICE|ONBLUR|PROMPT)\b
