@@ -4,5 +4,28 @@ scopeName: text.def
 uuid: E012E100-B915-11E6-B576-E094675966E4
 
 patterns:
-- name: comment
-  match: \b(ONCHOICE|ONBLUR|PROMPT)\b
+- name: comment.ahadef
+  begin: '#'
+  end: $
+  comment: Line Comments
+
+- name: support.function.builtin.ahadef
+  match: \b(ONCHOICE|ONBLUR|PROMPT|ONFOCUS|CALL|EXIT)\b
+  comment: builtin funtions
+#Fine here, change color from keyword.control, longer name
+
+- name: keyword.control.ahadef
+  match: \b(IF|ENDIF|WHILE|ENDWHILE|RETURN)\b
+
+- name: meta.function.ahadef
+  begin: ^(FUNC)\s*([a-zA-Z_]\w*)\s*(\()([^)]*)(\))
+  beginCaptures:
+    '1': {name: storage.type.function.ahadef}
+    '2': {name: entity.name.function.ahadef}
+    '3': {name: punctuation.definition.parameters.asp.ahadef}
+    '4': {name: variable.parameter.function.ahadef}
+    '5': {name: punctuation.definition.parameters.asp.ahadef}
+  end: ^(ENDFUNC)
+  endCaptures:
+    '1': {name: storage.type.function.ahadef}
+  comment: function definition

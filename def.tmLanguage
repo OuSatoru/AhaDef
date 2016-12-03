@@ -11,10 +11,72 @@
 	<key>patterns</key>
 	<array>
 		<dict>
-			<key>match</key>
-			<string>\b(ONCHOICE|ONBLUR|PROMPT)\b</string>
+			<key>begin</key>
+			<string>#</string>
+			<key>comment</key>
+			<string>Line Comments</string>
+			<key>end</key>
+			<string>$</string>
 			<key>name</key>
-			<string>comment</string>
+			<string>comment.ahadef</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>builtin funtions</string>
+			<key>match</key>
+			<string>\b(ONCHOICE|ONBLUR|PROMPT|ONFOCUS)\b</string>
+			<key>name</key>
+			<string>support.function.builtin.ahadef</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\b(IF|ENDIF|WHILE|ENDWHILE|RETURN)\b</string>
+			<key>name</key>
+			<string>keyword.control.ahadef</string>
+		</dict>
+		<dict>
+			<key>begin</key>
+			<string>^(FUNC)\s*([a-zA-Z_]\w*)\s*(\()([^)]*)(\))</string>
+			<key>beginCaptures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>storage.type.function</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>entity.name.function</string>
+				</dict>
+				<key>3</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.parameters.asp</string>
+				</dict>
+				<key>4</key>
+				<dict>
+					<key>name</key>
+					<string>variable.parameter.function</string>
+				</dict>
+				<key>5</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.parameters.asp</string>
+				</dict>
+			</dict>
+			<key>end</key>
+			<string>^(ENDFUNC)</string>
+			<key>endCaptures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>storage.type.function</string>
+				</dict>
+			</dict>
+			<key>name</key>
+			<string>meta.function.ahadef</string>
 		</dict>
 	</array>
 	<key>scopeName</key>
