@@ -1,11 +1,8 @@
-name: AhaDef
-fileTypes: [def]
-scopeName: source.def
+name: JustTest
+fileTypes: [test]
+scopeName: text.test
+uuid: CD3C00DE-B902-11E6-BD2B-E094675966E4
 
 patterns:
-- comment: Comments
-  name: comment.line.number-sign.def
-  begin: '#'
-  end: $
-  beginCaptures:
-    '0': {name: punctuation.definition.comment.def}
+- match: fuck
+  name: comment

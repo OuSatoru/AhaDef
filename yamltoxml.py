@@ -8,5 +8,3 @@ print(data)
 with open('ahadef.tmLanguage', 'wb') as f:
     plistlib.dump(data, f)
 
-
-

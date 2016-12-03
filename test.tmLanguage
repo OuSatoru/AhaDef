@@ -4,22 +4,22 @@
 <dict>
 	<key>fileTypes</key>
 	<array>
-		<string>def</string>
+		<string>test</string>
 	</array>
 	<key>name</key>
-	<string>AhaDef</string>
+	<string>JustTest</string>
 	<key>patterns</key>
 	<array>
 		<dict>
 			<key>match</key>
-			<string>ONCHOICE</string>
+			<string>fuck</string>
 			<key>name</key>
 			<string>comment</string>
 		</dict>
 	</array>
 	<key>scopeName</key>
-	<string>text.def</string>
+	<string>text.test</string>
 	<key>uuid</key>
-	<string>E012E100-B915-11E6-B576-E094675966E4</string>
+	<string>CD3C00DE-B902-11E6-BD2B-E094675966E4</string>
 </dict>
 </plist>
